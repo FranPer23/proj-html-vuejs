@@ -12,35 +12,15 @@ export default {
 </script>
 
 <template>
-  <header class="header">
-    <div class="head-container flex">
-      <div class="head-item">
-        <img class="logo" src="../assets/img/MasterStudy-1.svg" alt="" />
-      </div>
-      <div class="head-item">
-        <a href="">Courses</a>
-        <a href="">Course Formats</a>
-        <a href="">Add Course</a>
-        <a href="">Pages</a>
-        <a href="">Demos</a>
-      </div>
-      <div class="icons head-item">
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-twitter"></i>
-      </div>
-    </div>
-  </header>
   <section class="jumbotron">
     <div
       class="card text-start bg-transparent border border-0"
-      style="width: 30rem"
+      style="width: 40rem"
     >
       <div class="card-body">
-        <h1 class="fs-1">
+        <h1>
           Start your Human
-          <span>Revolution</span> today
+          <span style="color: #f2b91e">Revolution</span> today
         </h1>
         <p class="card-text">
           A wonderful serenity has taken possession of my entire soul, like
@@ -53,22 +33,60 @@ export default {
     <div class="yellow-countdown text-center">
       <div class="row">
         <div class="col mt-5">
-          <h5>Limited sale: All course with 55% off</h5>
-          <input type="text" />
-          <button>Subscribe</button>
+          <h5 class="sale">
+            <span style="color: white">Limited sale:</span> All courses with 55%
+            off
+          </h5>
+          <div class="custom-search">
+            <input
+              type="text"
+              class="custom-search-input"
+              placeholder="Enter your email"
+            />
+            <button class="custom-search-botton" type="submit">
+              SUBSCRIBE
+            </button>
+          </div>
         </div>
-        <div class="col mt-5">
-          <p>countdown</p>
+        <div class="col mt-4">
+          <div class="row numbers">
+            <div class="col">
+              <span>26</span>
+            </div>
+            <div class="col">
+              <span>01</span>
+            </div>
+            <div class="col">
+              <span>47</span>
+            </div>
+            <div class="col">
+              <span>35</span>
+            </div>
+          </div>
+          <div class="row description">
+            <div class="col">
+              <span>Days</span>
+            </div>
+            <div class="col">
+              <span>Hours</span>
+            </div>
+            <div class="col">
+              <span>Minutes</span>
+            </div>
+            <div class="col">
+              <span>Seconds</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="description">
-    <div class="container text-center">
+    <div class="container">
       <div class="row">
-        <div class="col">
-          <h2>
+        <div class="col descr">
+          <h2 style="font-weight: bold">
             Hey there, my name is John Doe. I'm the founder of the Brain
             Academy.
           </h2>
@@ -101,33 +119,6 @@ export default {
 
 <style lang="scss">
 @use "../style/generals.scss";
-.header {
-  height: 100px;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 1.5rem;
-}
-.logo {
-  margin-right: 14rem;
-}
-
-.head-item {
-  margin-left: 1rem;
-}
-
-a {
-  text-decoration: none;
-  padding-left: 1rem;
-  color: black;
-}
-
-i {
-  padding-left: 1rem;
-}
 
 .jumbotron {
   height: 800px;
@@ -135,21 +126,74 @@ i {
   background-size: cover;
   position: relative;
 
-  span {
-    color: #f2b91e;
-  }
   .card {
     position: absolute;
-    left: 700px;
+    left: 800px;
     top: 200px;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
   }
 }
 
 .yellow-countdown {
+  position: absolute;
+  top: 50rem;
+  right: 19rem;
   height: 200px;
   width: 70%;
   background-color: #f2b91e;
   border-radius: 5px;
   margin: 0 auto;
+
+  h5 {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+.description {
+  margin-top: 10rem;
+}
+
+.descr {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin-top: 1rem;
+  }
+}
+
+.numbers {
+  color: white;
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.custom-search {
+  position: relative;
+  width: 400px;
+}
+.custom-search-input {
+  width: 100%;
+  border: 0.2px solid white;
+  border-radius: 100px;
+  padding: 10px 100px 10px 20px;
+  box-sizing: border-box;
+  outline: none;
+}
+.custom-search-botton {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  border: 0;
+  background: #2d4649;
+  color: #fff;
+  outline: none;
+  border-radius: 100px;
+  z-index: 2;
 }
 </style>

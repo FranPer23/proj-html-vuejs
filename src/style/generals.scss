@@ -2,7 +2,16 @@
 @import "bootstrap/scss/bootstrap";
 @import "@fontsource/abyssinica-sil";
 
+* {
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Abyssinica SIL", serif;
+}
 
 img {
     max-width: 100%;
-};
+}
+
+;

@@ -16,6 +16,7 @@ export default {
 <style lang="scss" scoped>
 h2 {
   text-align: center;
-  color: blue;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 </style>
